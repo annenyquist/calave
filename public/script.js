@@ -1,9 +1,9 @@
 // create the module and name it scotchApp
 // also include ngRoute for all our routing needs
-var scotchApp = angular.module('scotchApp', ['ngRoute']);
+var calaveApp = angular.module('calaveApp', ['ngRoute']);
 
 // configure our routes
-scotchApp.config(function($routeProvider) {
+calaveApp.config(function($routeProvider) {
     $routeProvider
 
         // route for the home page
@@ -31,19 +31,19 @@ scotchApp.config(function($routeProvider) {
 });
 
 // create the controller and inject Angular's $scope
-scotchApp.controller('mainController', function($scope) {
+calaveApp.controller('mainController', function($scope) {
     // create a message to display in our view
     $scope.message = 'Everyone come and see how good I look!';
 });
 
-scotchApp.controller('aboutController', function($scope) {
+calaveApp.controller('aboutController', function($scope) {
 });
 
-scotchApp.controller('contactController', function($scope) {
+calaveApp.controller('contactController', function($scope) {
 });
 
-scotchApp.controller('examplesController', function($scope) {
+calaveApp.controller('examplesController', function($scope) {
 });
 
-scotchApp.controller('writtenworkController', function($scope) {
+calaveApp.controller('writtenworkController', function($scope) {
 });
