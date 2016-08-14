@@ -24,9 +24,9 @@ calaveApp.config(function($routeProvider) {
             templateUrl : 'pages/concepts.html',
             controller  : 'conceptsController'
         })
-        .when('/writtenwork', {
-            templateUrl : 'pages/writtenwork.html',
-            controller  : 'writtenworkController'
+        .when('/research', {
+            templateUrl : 'pages/research.html',
+            controller  : 'researchController'
         });
 });
 
@@ -45,5 +45,5 @@ calaveApp.controller('contactController', function($scope) {
 calaveApp.controller('conceptsController', function($scope) {
 });
 
-calaveApp.controller('writtenworkController', function($scope) {
+calaveApp.controller('researchController', function($scope) {
 });
