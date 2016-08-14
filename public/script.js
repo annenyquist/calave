@@ -20,9 +20,9 @@ calaveApp.config(function($routeProvider) {
             templateUrl : 'pages/contact.html',
             controller  : 'contactController'
         })
-        .when('/examples', {
-            templateUrl : 'pages/examples.html',
-            controller  : 'examplesController'
+        .when('/concepts', {
+            templateUrl : 'pages/concepts.html',
+            controller  : 'conceptsController'
         })
         .when('/writtenwork', {
             templateUrl : 'pages/writtenwork.html',
@@ -42,7 +42,7 @@ calaveApp.controller('aboutController', function($scope) {
 calaveApp.controller('contactController', function($scope) {
 });
 
-calaveApp.controller('examplesController', function($scope) {
+calaveApp.controller('conceptsController', function($scope) {
 });
 
 calaveApp.controller('writtenworkController', function($scope) {
