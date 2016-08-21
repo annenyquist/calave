@@ -1,0 +1,79 @@
+.clear {
+  clear:both;
+  display:block;
+  overflow:hidden;
+  visibility:hidden;
+  height: 0;
+}
+
+.concept-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.concept {
+  display: inline-block;
+  width: 640px;
+  position: relative;
+}
+
+.concept img {
+  width: 640px;
+}
+
+.concept .info-icon {
+  position: absolute;
+  font-size: 30pt;
+  line-height: 30pt;
+  color: #000000;
+}
+
+.concept .info-popup {
+  display: none;
+  position: absolute;
+  margin: 0;
+  width: 200px;
+  height: 100px;
+  background: white;
+  border: 1px dashed black;
+}
+
+.concept #aa-1-icon { top: 95px; left: 200px; }
+.concept #aa-1-popup { top: -10px; left: 190px; }
+.concept #aa-2-icon { top: 170px; left: 135px; }
+.concept #aa-2-popup { top: 160px; left: 180px;}
+.concept #aa-3-icon { top: 165px; left: 410px; }
+.concept #aa-3-popup { top: 150px; left: 200px; }
+.concept #aa-4-icon { top: 70px; left: 350px; }
+.concept #aa-4-popup { top: 50px; left: 395px; }
+.concept #aa-5-icon { top: 180px; left: 390px; }
+.concept #aa-5-popup { top: 165px; left: 180px; }
+
+.concept #pp-1-icon { top: 225px; left: 50px; }
+.concept #pp-1-popup { top: 210px; left: 95px; }
+.concept #pp-2-icon { top: 155px; left: 130px; }
+.concept #pp-2-popup { top: 50px; left: 105px;}
+.concept #pp-3-icon { top: 155px; left: 240px; }
+.concept #pp-3-popup { top: 50px; left: 200px; }
+.concept #pp-4-icon { top: 200px; left: 360px; }
+.concept #pp-4-popup { top: 245px; left: 235px; }
+.concept #pp-5-icon { top: 140px; left: 410px; }
+.concept #pp-5-popup { top: 60px; left: 200px; }
+.concept #pp-6-icon { top: 120px; left: 350px; }
+.concept #pp-6-popup { top: 165px; left: 240px; }
+
+.concept #gg-1-icon { top: 70px; left: 30px; }
+.concept #gg-1-popup { top: 50px; left: 75px; }
+.concept #gg-2-icon { top: 160px; left: 415px; }
+.concept #gg-2-popup { top:205px; left: 330px;}
+.concept #gg-3-icon { top: 190px; left: 100px; }
+.concept #gg-3-popup { top: 235px; left: 65px; }
+.concept #gg-4-icon { top: 150px; left: 250px; }
+.concept #gg-4-popup { top: 45px; left: 70px; }
+.concept #gg-5-icon { top: 120px; left: 380px; }
+.concept #gg-5-popup { top: 20px; left: 180px; }
+.concept #gg-6-icon { top: 240px; left: 270px; }
+.concept #gg-6-popup { top: 200px; left: 60px; }
