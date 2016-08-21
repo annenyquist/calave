@@ -51,9 +51,9 @@ calaveApp.controller('conceptsController', function($scope) {
 calaveApp.controller('researchController',
                      function($scope, $location, $anchorScroll) {
   angular.element(document).ready(function() {
-    var fragmentIndex = $location.$$url.indexOf("#");
+    var fragmentIndex = $location.$$url.indexOf('#');
     if (fragmentIndex >= 0) {
-      var fragment = $location.$$url.substring(fragmentIndex + 1)
+      var fragment = $location.$$url.substring(fragmentIndex + 1);
       $location.hash(fragment);
     }
     $anchorScroll();
