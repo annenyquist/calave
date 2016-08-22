@@ -63,8 +63,9 @@ figcaption {
   margin: 0;
   width: 200px;
   height: 100px;
-  background: white;
-  border: 1px dashed black;
+  background: #eeeeee;
+  border: 1px solid #808080;
+  padding: 5px;
 }
 
 .concept #aa-1-icon { top: 95px; left: 200px; }
