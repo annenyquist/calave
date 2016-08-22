@@ -24,6 +24,10 @@
   height: 0;
 }
 
+figcaption {
+  font-style: italic;
+}
+
 .concept-container {
   display: flex;
   flex-direction: row;
