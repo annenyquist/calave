@@ -8,7 +8,7 @@ calaveApp.config(function($routeProvider, $locationProvider) {
 
         // route for the home page
         .when('/', {
-            templateUrl : 'pages/home.html',
+            templateUrl : 'pages/introduction.html',
             controller  : 'mainController'
         })
 
