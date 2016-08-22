@@ -24,6 +24,10 @@
   height: 0;
 }
 
+figure {
+  margin: 30px;
+}
+
 figcaption {
   font-style: italic;
 }
