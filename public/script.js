@@ -16,9 +16,9 @@ calaveApp.config(function($routeProvider, $locationProvider) {
             templateUrl : 'pages/about.html',
             controller  : 'aboutController'
         })
-        .when('/concepts', {
-            templateUrl : 'pages/concepts.html',
-            controller  : 'conceptsController'
+        .when('/design', {
+            templateUrl : 'pages/design.html',
+            controller  : 'designController'
         })
         .when('/research', {
             templateUrl : 'pages/research.html',
@@ -38,7 +38,7 @@ calaveApp.controller('mainController', function($scope) {
 calaveApp.controller('aboutController', function($scope) {
 });
 
-calaveApp.controller('conceptsController', function($scope) {
+calaveApp.controller('designController', function($scope) {
 });
 
 calaveApp.controller('researchController',
