@@ -38,7 +38,21 @@ calaveApp.controller('mainController', function($scope) {
 calaveApp.controller('aboutController', function($scope) {
 });
 
-calaveApp.controller('designController', function($scope) {
+calaveApp.controller('designController',
+                     function($scope, $location, $anchorScroll) {
+  angular.element(document).ready(function() {
+    var fragmentIndex = $location.$$url.indexOf('#');
+    if (fragmentIndex >= 0) {
+      var fragment = $location.$$url.substring(fragmentIndex + 1);
+      $location.hash(fragment);
+    }
+    $anchorScroll();
+  });
+
+   $scope.scrollTo = function(id) {
+      $location.hash(id);
+      $anchorScroll();
+   }
 });
 
 calaveApp.controller('researchController',
