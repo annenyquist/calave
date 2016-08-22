@@ -3,6 +3,19 @@
   margin-right: 30px;
 }
 
+.centered-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered {
+  display: inline-block;
+  position: relative;
+}
+
 .clear {
   clear:both;
   display:block;
