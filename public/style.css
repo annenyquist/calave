@@ -68,6 +68,10 @@ figcaption {
   padding: 5px;
 }
 
+.concept .info-popup .header {
+  font-weight: bold;
+}
+
 .concept #aa-1-icon { top: 75px; left: 200px; }
 .concept #aa-1-popup { top: -30px; left: 190px; }
 .concept #aa-2-icon { top: 170px; left: 135px; }
