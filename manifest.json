@@ -3,6 +3,6 @@
   "short_name": "Activated alleys",
   "start_url": "/?homescreen=1",
   "display": "standalone",
-  "theme_color": "#3f51b5",
-  "background_color": "#3f51b5",
+  "theme_color": "#373b50",
+  "background_color": "#373b50",
 }
