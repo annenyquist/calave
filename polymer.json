@@ -1,0 +1,19 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/calave-app.html",
+  "fragments": [
+    "src/404.html",
+    "src/about.html",
+    "src/design.html",
+    "src/introduction.html",
+    "src/research.html"
+  ],
+  "sourceGlobs": [
+   "src/**/*",
+   "images/**/*",
+   "bower.json"
+  ],
+  "includeDependencies": [
+    "bower_components/webcomponentsjs/webcomponents-lite.min.js"
+  ]
+}

@@ -1,0 +1,475 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="design-view">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+
+      .concept-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .concept {
+        display: inline-block;
+        width: 640px;
+        position: relative;
+      }
+
+      .concept img {
+        width: 640px;
+      }
+
+      .concept .info-icon {
+        position: absolute;
+      }
+
+      .concept .info-icon img {
+        width: 30px;
+      }
+
+      .concept .info-popup {
+        display: none;
+        position: absolute;
+        margin: 0;
+        width: 200px;
+        height: 100px;
+        background: #eeeeee;
+        border: 1px solid #808080;
+        padding: 5px;
+      }
+
+      .concept .info-popup .header {
+        font-weight: bold;
+      }
+
+      #aa-fw {  }
+      #aa-led { margin-top: 15px; }
+      #pp-fw { margin-top: 12px; }
+      #pp-vm {  }
+      #gg-fw {  }
+      #gg-vm { margin-top: 47px; }
+
+      .concept #aa-1-icon { top: 75px; left: 200px; }
+      .concept #aa-1-popup { top: -30px; left: 190px; }
+      .concept #aa-2-icon { top: 170px; left: 135px; }
+      .concept #aa-2-popup { top: 160px; left: 180px; height: 140px; }
+      .concept #aa-3-icon { top: 165px; left: 410px; }
+      .concept #aa-3-popup { top: 150px; left: 200px; height: 110px; }
+      .concept #aa-4-icon { top: 65px; left: 350px; }
+      .concept #aa-4-popup { top: 34px; left: 395px; }
+      .concept #aa-5-icon { top: 165px; left: 390px; }
+      .concept #aa-5-popup { top: 120px; left: 435px; height: 110px; }
+
+      .concept #pp-1-icon { top: 237px; left: 50px; }
+      .concept #pp-1-popup { top: 222px; left: 95px;  height: 110px; }
+      .concept #pp-2-icon { top: 167px; left: 130px; }
+      .concept #pp-2-popup { top: 62px; left: 105px; }
+      .concept #pp-3-icon { top: 167px; left: 240px; }
+      .concept #pp-3-popup { top: 61px; left: 200px; }
+      .concept #pp-4-icon { top: 212px; left: 360px; }
+      .concept #pp-4-popup { top: 257px; left: 235px; }
+      .concept #pp-5-icon { top: 152px; left: 410px; }
+      .concept #pp-5-popup { top: 72px; left: 200px; height: 120px; }
+      .concept #pp-6-icon { top: 120px; left: 350px; }
+      .concept #pp-6-popup { top: 165px; left: 240px; }
+      .concept #pp-7-icon { top: 235px; left: 120px; }
+      .concept #pp-7-popup { top: 195px; left: 165px; }
+
+      .concept #gg-1-icon { top: 70px; left: 30px; }
+      .concept #gg-1-popup { top: 50px; left: 75px; height: 120px; }
+      .concept #gg-2-icon { top: 190px; left: 100px; }
+      .concept #gg-2-popup { top: 235px; left: 65px; }
+      .concept #gg-3-icon { top: 150px; left: 250px; }
+      .concept #gg-3-popup { top: 45px; left: 70px; }
+      .concept #gg-4-icon { top: 160px; left: 415px; }
+      .concept #gg-4-popup { top:205px; left: 330px; height: 130px; }
+      .concept #gg-5-icon { top: 82px; left: 200px; }
+      .concept #gg-5-popup { top: 47px; left: 245px; height: 120px; }
+      .concept #gg-6-icon { top: 167px; left: 380px; }
+      .concept #gg-6-popup { top: 67px; left: 180px; }
+      .concept #gg-7-icon { top: 287px; left: 270px; }
+      .concept #gg-7-popup { top: 247px; left: 60px; height: 120px; }
+
+    </style>
+
+    <div class="card">
+
+<h1>Design</h1>
+
+<div class="toc">
+  <h3>
+    Table of Contents
+  </h3>
+<ul>
+  <li>
+    <a on-tap="scrollTo" data-args="general-design-considerations">General Design Considerations</a>
+  </li>
+  <li>
+    <a on-tap="scrollTo" data-args="alley-of-art">Alley of Art</a>
+  </li>
+  <li>
+    <a on-tap="scrollTo" data-args="puzzle-place">Puzzle Place</a>
+  </li>
+  <li>
+    <a on-tap="scrollTo" data-args="garden-groove">Garden Groove</a>
+  </li>
+</ul>
+</div>
+
+<p>
+The design plan consists of three unique concepts, which are described with specific features associated with their individual theme, as well as design features that are more general. Based on scholarly research, surveys, and interview results, the following recommendations have been developed.
+</p>
+
+<h2 id="general-design-considerations">
+General Design Considerations
+</h2>
+
+<p>
+California Avenue is an established shopping street, and nicely decorated with plants, flowers, art, and a few umbrellas that provide shade, and various options of seating. A few feet from the alley, there already is an area with plants, a bike rack and a bench. Because the alley is quite narrow, and the proximity of the existing nearby seating option, no permanent seating has been included in the concepts. Temporary seating can be provided for special occasions if needed. Different times of day have been considered in developing the concepts. The alley should be a more exciting place to be in the daytime as well as at night. The wooden structure in the Puzzle Place and Garden Groove concepts provides shade when at the hottest time of the day as well as architectural interest and opportunity for using lights as decoration at night. A structure made of steel is chosen for the Alley of Art concept because the material is highly compatible with the proposed technological features, and provides another material option. There is currently no lighting in the alley, but street lights stand in the parking lot behind California Avenue and near the storefronts and provide the alley with some light. Lighting is a feature in all three concepts because it has a major impact in the sense that light bring a sense of security and it also adds to the atmosphere the design concepts seek to accomplish.
+</p>
+
+<figure>
+  <img src="/images/concepts/generaldesign/BenchNearAlley640.JPG">
+  <figcaption>A bikerack and a bench is located near the alley.</figcaption>
+</figure>
+
+
+<figure>
+  <img src="/images/concepts/generaldesign/dark-alley-from-calave-640.jpg">
+  <figcaption>Alley in the dark seen from California Avenue.</figcaption>
+</figure>
+
+
+<figure>
+  <img src="/images/concepts/generaldesign/dark-alley-from-parking-640.jpg">
+  <figcaption>Alley in the dark seen from parking lot.</figcaption>
+</figure>
+
+
+<h2 id="alley-of-art">Alley of Art</h2>
+
+<div class="concept-container">
+  <div class="concept">
+    <img id="aa-fw"
+         src="/images/concepts/alleyofarts/AAFeatureWallSteel640.png" />
+
+    <div id="aa-1-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="aa-1-popup" class="info-popup">
+      <div class="header">Projector Screen</div>
+      A smooth light-colored surface on which to display short films and photographs.
+    </div>
+
+    <div id="aa-2-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="aa-2-popup" class="info-popup">
+      <div class="header">Digital Board</div>
+      Shows different messages from the Public Art Department’s Facebook site, inspirational quotations, and informational messages.
+    </div>
+
+    <div id="aa-3-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="aa-3-popup" class="info-popup">
+      <div class="header">Movie Poster Display</div>
+      Exhibits photographs or physical artwork such as paintings and prints of relevant artists.
+    </div>
+  </div>
+
+  <div class="concept">
+    <img id="aa-led"
+         src="/images/concepts/alleyofarts/AALEDSteel640.png" />
+
+    <div id="aa-4-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="aa-4-popup" class="info-popup">
+      <div class="header">Projector</div>
+      Displays short films, photographic slideshows, and other visual art.
+    </div>
+
+    <div id="aa-5-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="aa-5-popup" class="info-popup">
+      <div class="header">LED Lighting</div>
+      Mounted strips of LED lighting programmable to show color sequences and patterns of light.
+    </div>
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<p>
+Some of the buildings along California Avenue are already decorated with beautiful murals. However, many blank canvases still exist in the form of empty building walls adjacent to alleys that can be filled with art. The City of Palo Alto published a revised draft of its Public Art Master Plan in May of 2016, the first of its kind which was approved later that same year by the city council. In the plan, one objective for business districts is to “locate art in unexpected places, such as alleys, to provide an element of surprise and whimsy to everyday life.” The short-term recommendation, which means within a year, is to identify six relevant alleys in the two downtown areas of Palo Alto and gather propositions for temporary installations of individual pieces of art (City of Palo Alto, 2016). The alley that is the focus of this project is proposed as a part of the Public Art in Alleys Project, named “Park Blvd 1”; it is posted on the
+<a href="https://www.google.com/maps/d/viewer?mid=1AUOuWuDvI0_jAbZYvvY_JBD9lIs">Public Art Collection Map</a>
+as a proposed site for future installation of public art.
+</p>
+
+<p>
+The Public Art Master Plan refers to a community outreach project by Mobile Arts Platform (“What’s the Big Idea?”), whose goal was to engage the public in a conversation about the future of public art. The result of this project is presented in the Public Art Master Plan. Specifically for California Avenue, members of the public who engaged in the project thought that the current space is not in step with the character of the neighborhood. The artists behind this project also found that people want to see technology and digital media integrated into the public art and this is suitable in a place like Silicon Valley where the tech industry is so critical. One of the more technological pieces of art nearby is the interactive artwork “Conversation” displayed in Palo Alto City Hall.
+</p>
+
+<p>
+An alley can be activated with art in multiple ways, such as finding features that do not take up too much of the narrow width of the alley and having a mesh grid of multicolored, programmable LED lights covering a whole wall. A feature like this can be set to display different patterns of light moving all over the wall. Another objective of the Public Art Master Plan is to “use available tools to engage the public in the Public Art Program,” and a short-term recommendation is to “increase use of mobile platforms and social media as a means of promoting the Public Art program.”  Using Public Art’s Facebook page, a competition can be set up in which members of the public program their own patterns for display on the wall of LED lights. An alternative to the net of LED lights is lighting panels. They work in the same way as strings of light, but the expression looks different to the viewer. On the other wall, I suggest that multiple smaller features be implemented. These features might include a sizable digital board where the Public Art Program can display messages ranging from practical information such as temperature and weather forecasts to inspirational quotations, messages following local sports events, or fun facts about the public artworks in the nearby area. Another possibility is to engage members of the public by allowing them to send in messages for display on the board for a specified period of time. If a part of an alley wall is covered only with white paint, this can serve as a movie screen, and a projector can be mounted on the other wall to display short movies or images of other works of art. A public event where the projector is in active use is if a short film screening is arranged. A select number of temporary seating options can be added for the occasion.
+</p>
+
+<p>
+Mounting movie poster displays allows for the exhibition of paintings, prints, posters, and photographs. The artworks shown in these movie poster displays will be readily available during the day and at night as long as there is sufficient lighting. The other features mentioned would make the greatest impact at night, but they too can be used during the day. Most of these features require electricity; to minimize this cost, solar panels should be placed on the neighboring roof to keep the features as sustainable as possible.
+</p>
+
+<figure>
+  <img src="/images/concepts/alleyofarts/CoveredSteel640L.png">
+  <figcaption>Steel Roof Structure suggested for the Alley of Art concept.</figcaption>
+</figure>
+
+<h2 id="puzzle-place">Puzzle Place</h2>
+
+<div class="concept-container">
+  <div class="concept">
+    <img id="pp-fw"
+         src="/images/concepts/puzzleplace/PPFeatureWall640.png" />
+
+    <div id="pp-1-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="pp-1-popup" class="info-popup">
+      <div class="header">Color Squares</div>
+      Painted with chalkboard paint for decoration by young artists or for decoration purposes.
+    </div>
+
+    <div id="pp-2-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="pp-2-popup" class="info-popup">
+      <div class="header">Sliding Puzzles</div>
+      Users slide the tiles to discover the hidden image.
+    </div>
+
+    <div id="pp-3-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="pp-3-popup" class="info-popup">
+      <div class="header">Spinning Matching Puzzle</div>
+      Users spin the wheels to explore the different compositions.
+    </div>
+
+    <div id="pp-4-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="pp-4-popup" class="info-popup">
+      <div class="header">Peg Board</div>
+      Users move the pegs to create patterns.
+    </div>
+
+    <div id="pp-5-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="pp-5-popup" class="info-popup">
+      <div class="header">Chalk Station</div>
+      Stores a donated set of chalk to use on the wall, squares, and ground areas painted with chalkboard paint.
+    </div>
+  </div>
+
+  <div class="concept">
+    <img id="pp-vm"
+         src="/images/concepts/puzzleplace/PPVineMural640.png" />
+
+    <div id="pp-6-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="pp-6-popup" class="info-popup">
+      <div class="header">Vine Mural</div>
+      Uses multiple types of vines to create a mural covering the wall.
+    </div>
+
+    <div id="pp-7-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="pp-7-popup" class="info-popup">
+      <div class="header">Chalkboard Deck</div>
+      Users create their own designs on the ground using colored chalk.
+    </div>
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<p>
+The downtown area of California Avenue consists mostly of smaller shops and restaurants. Gray Matters is a store which sells toys that focus on developing children’s cognitive and motor skills while still allowing them to have fun. The store sometimes has a table, chairs, and toys for children to play with outside. I have noticed that entertainment for children is offered when the farmers market is open, and there are a few family-friendly restaurants and cafes. Except for this, there is not much for children to do in the area. The closest playground is in Jerry Bowden Park, and the closest green space is the Sarah Wallis Park on the corner of Grant Avenue and Ash Street, but this park does not have any features meant for children. Even in a narrow alley like the one in this case, many features can make an immense impact. For example, it is important to have plenty of room for pedestrians to walk through the alley. Also, different types of puzzles, such as sliding puzzles where you move the tiles in the correct order to create an image, can be attached to the wall. Spinning match puzzles, where children spin different wheels mounted to a pin to find all the right parts to form an image, can be mounted in a way similar to the sliding puzzles. A calculating tool such as an abacus may help children learn how to count and calculate, and they can create patterns on a peg board. Carnival mirrors that distort the user’s reflection do not take up a lot of space and create fun for both children and adults. Many children like to express their creativity by drawing on pavement with chalk. I suggest that a part of the wall be painted with chalkboard paint and a donated set of colorful chalk for children to use in the assigned area be secured. A xylophone or set of cowbells can be mounted in an upright position to stimulate other senses and help children learn musical skills. The puzzles and features suggested can be adjusted to suit different age groups. Sliding puzzles, which can help develop both cognitive and motor skills, can be made more advanced by increasing the number of tiles. It is also important for these features to be mounted at a height where most children will be able to enjoy them.
+</p>
+
+<p>
+Placing the puzzles and other creative activity features on the same wall would help keep one side of the alley clear for pedestrians to walk through. The other wall can be decorated with more features such as colorful paint or a mural. If paint is chosen as decoration, multiple colors can be applied to the wall. Stripes or simple geometric patterns such as squares, triangles, and multicolored polka dots can make a big difference when compared to the single neutral color that is currently painted on the wall. Bright colors offer a simple decorative feature that works both during daytime and at night, as long as there is enough lighting.
+</p>
+<figure>
+  <img src="/images/concepts/puzzleplace/GreyMatters-640.jpg">
+  <figcaption>Gray Matters specializes in toys that help children develop cognitive and motor skills while having fun.</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/concepts/puzzleplace/GreyTable-640.jpg">
+  <figcaption>Children are invited to try out these toys outside Gray Matters.</figcaption>
+</figure>
+
+<figure>
+  <img src="/images/concepts/puzzleplace/NearbyPlayground-640.jpg">
+  <figcaption>The nearby playground in Jerry Bowden Park is under construction.</figcaption>
+</figure>
+
+<h2 id="garden-groove">Garden Groove</h2>
+
+<div class="concept-container">
+  <div class="concept">
+    <img id="gg-fw"
+         src="/images/concepts/gardengroove/GGFeatureWall640.png" />
+
+    <div id="gg-1-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="gg-1-popup" class="info-popup">
+      <div class="header">Climbing Plants</div>
+      Voluminous climbing plants on each side of this wall creating a frame for the other features.
+    </div>
+
+    <div id="gg-2-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="gg-2-popup" class="info-popup">
+      <div class="header">Bamboo Panels</div>
+      Create a softer look for the wall and add to the warm and earthy atmosphere.
+    </div>
+
+    <div id="gg-3-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="gg-3-popup" class="info-popup">
+      <div class="header">Water Feature</div>
+      Helps drown urban noise, reflects sunlight, and brings serenity.
+    </div>
+
+    <div id="gg-4-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="gg-4-popup" class="info-popup">
+      <div class="header">Hanging Planters</div>
+      Planted according to a theme such as herbs or native California flowers. Add nameplates for educational purposes.
+    </div>
+  </div>
+
+  <div class="concept">
+    <img id="gg-vm"
+         src="/images/concepts/gardengroove/GGVineMural640.png" />
+
+    <div id="gg-5-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="gg-5-popup" class="info-popup">
+      <div class="header">Wooden Beams</div>
+      Provide protection from the sun and are perfect for using fairy lights to create a warm atmosphere at night.
+    </div>
+
+    <div id="gg-6-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="gg-6-popup" class="info-popup">
+      <div class="header">Vine Mural</div>
+      Uses multiple types of vines to create a pattern covering the wall.
+    </div>
+
+    <div id="gg-7-icon" class="info-icon">
+      <img src="/images/fa-plus-circle.png"
+         on-mouseover="showPopup"
+         on-mouseleave="hidePopup" />
+    </div>
+    <div id="gg-7-popup" class="info-popup">
+      <div class="header">Wooden Covering</div>
+      Uses deck-style boards to build a softer ground to walk on and enhance the overall environment.
+    </div>
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<p>
+Plants and flowers are commonly used as decorations in multiple types of situations, from everyday dinner tables to weddings. According to the baseline study and the visual preference study, plants and flora were the features that most people want to see more of in the alleys. A flowering urban alley filled with greenery is a concept that serves a wide range of people visiting California Avenue. To create an activated alley based on this concept, the goal is for pedestrians who use the alley to forget for a little while that they are in an urban environment. To achieve this, I suggest that as much as possible of the normal pavement and building walls be covered with alternative materials. One of the alley walls could be covered in a vine or similar climbing plant. When vines are planted in the ground, they often do not need more space than about one square foot for the roots to grow, which makes them suitable for the narrow alley. Vines can be shaped to grow in a pattern, and the use of two or more types of vine can create more interest by adding color and contrast. For the other wall, vertical panels of bamboo mounted to the wall can be alternated with more significant features. Such features can include a panel with hanging flower pots or flower boxes. I suggest that these be planted with a theme, for example, different types of herbs or plants native to California. For educational purposes, name tags with information about the plant, the plant’s name in both English and Latin, a description of its features, and a list of its properties may be desirable. Also, the sound and look of a water feature can have a soothing effect. A small fountain that recycles the water it uses with a nice mosaic backsplash would be a great addition to the plants and greenery.
+</p>
+
+<figure>
+  <img src="/images/concepts/gardengroove/WoodenCovering640.png">
+  <figcaption>The wooden beams are designed to create architectural interest.</figcaption>
+</figure>
+
+</div>
+
+
+</template>
+
+<script>
+Polymer({
+  is: 'design-view',
+
+  showPopup: function(e) {
+    var popupId = e.target.parentNode.id.replace(/icon/i, 'popup');
+    this.$$('#' + popupId).style.display = 'block';
+  },
+
+  hidePopup: function(e) {
+    var popupId = e.target.parentNode.id.replace(/icon/i, 'popup');
+    this.$$('#' + popupId).style.display = 'none';
+  },
+
+  scrollTo: function(e) {
+    var scrollToElement = e.target.getAttribute('data-args');
+    this.$$('#' + scrollToElement).scrollIntoView();
+  }
+});
+</script>
+</dom-module>

@@ -1,8 +1,8 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "build/bundled",
     "rewrites": [ {
-      "source": "**",
+      "source": "**/!{*.*}",
       "destination": "/index.html"
     } ]
   }

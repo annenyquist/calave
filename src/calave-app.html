@@ -1,0 +1,151 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/app-route/app-location.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+
+<dom-module id="calave-app">
+  <template>
+    <style>
+      :host {
+        --app-primary-color: #4285f4;
+        --app-secondary-color: black;
+        display: block;
+      }
+
+      app-header {
+        color: #ffffff;
+        background-color: var(--app-primary-color);
+      }
+
+      app-header paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      }
+
+      app-drawer {
+        --app-drawer-width: 150px;
+      }
+
+      app-toolbar h1 {
+        font-size: 20pt;
+        /* --app-toolbar-font-size: 15pt; */
+      }
+
+      .drawer-list {
+        margin: 0 20px;
+      }
+
+      .drawer-list a {
+        display: block;
+        padding: 0 16px;
+        text-decoration: none;
+        color: var(--app-secondary-color);
+        line-height: 40px;
+      }
+
+      .drawer-list a.iron-selected {
+        color: black;
+        font-weight: bold;
+      }
+    </style>
+
+    <app-location route="{{route}}"></app-location>
+    <app-route
+        route="{{route}}"
+        pattern="/:page"
+        data="{{routeData}}"
+        tail="{{subroute}}"></app-route>
+
+    <app-drawer-layout fullbleed>
+      <!-- Drawer content -->
+      <app-drawer>
+        <app-toolbar>Menu</app-toolbar>
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+          <a name="introduction" href="/introduction">Introduction</a>
+          <a name="design" href="/design">Design</a>
+          <a name="research" href="/research">Research</a>
+          <a name="about" href="/about">About</a>
+        </iron-selector>
+      </app-drawer>
+
+      <!-- Main content -->
+      <app-header-layout>
+        <app-header condenses reveals effects="waterfall resize-title">
+          <app-toolbar>
+            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+            <h1 main-title>Activated alleys: A design plan for California Avenue, Palo Alto</h1>
+          </app-toolbar>
+        </app-header>
+
+        <iron-pages
+            selected="[[page]]"
+            attr-for-selected="name"
+            fallback-selection="error"
+            role="main">
+          <introduction-view name="introduction"></introduction-view>
+          <design-view name="design"></design-view>
+          <research-view name="research"></research-view>
+          <about-view name="about"></about-view>
+          <error-view name="error"></error-view>
+        </iron-pages>
+      </app-header-layout>
+    </app-drawer-layout>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'calave-app',
+
+      properties: {
+        page: {
+          type: String,
+          reflectToAttribute: true,
+          observer: '_pageChanged'
+        }
+      },
+
+      observers: [
+        '_routePageChanged(routeData.page)'
+      ],
+
+      listeners: {
+        'iron-select': 'ironSelected',
+        'iron-activate': 'ironActivate'
+      },
+
+      ironSelected: function(e) {
+        this._scrollToTop();
+      },
+
+      ironActivate: function(e) {
+        this._scrollToTop();
+      },
+
+      _routePageChanged: function(page) {
+        this.page = page || 'introduction';
+      },
+
+      _pageChanged: function(page) {
+        var resolvedPageUrl = this.resolveUrl(page + '.html');
+        this.importHref(resolvedPageUrl, null, this._showPage404, true);
+        this._scrollToTop();
+      },
+
+      _scrollToTop: function() {
+        this.$$('app-header-layout').scrollIntoView({block: "start", behavior: "instant"});
+      },
+
+      _showPage404: function() {
+        this.page = '404';
+      }
+    });
+  </script>
+</dom-module>
