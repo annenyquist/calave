@@ -16,8 +16,8 @@
   <template>
     <style>
       :host {
-        --app-primary-color: #4285f4;
-        --app-secondary-color: black;
+        --app-primary-color: #373b50;
+        --app-secondary-color: #afb1b9;
         display: block;
       }
 
@@ -32,10 +32,17 @@
 
       app-drawer {
         --app-drawer-width: 150px;
+        --app-drawer-content-container: {
+          background-color: #afb1b9;
+        }
       }
 
+      app-toolbar {
+        color: var(--app-primary-color);
+      }
       app-toolbar h1 {
         font-size: 20pt;
+        color: white;
         /* --app-toolbar-font-size: 15pt; */
       }
 
@@ -47,12 +54,12 @@
         display: block;
         padding: 0 16px;
         text-decoration: none;
-        color: var(--app-secondary-color);
+        color: var(--app-primary-color);
         line-height: 40px;
       }
 
       .drawer-list a.iron-selected {
-        color: black;
+        color: var(--app-primary-color);
         font-weight: bold;
       }
     </style>
